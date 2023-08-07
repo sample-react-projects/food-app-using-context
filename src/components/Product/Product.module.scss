@@ -1,0 +1,27 @@
+.item {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  display: flex;
+  margin: 16px 0;
+  padding: 16px;
+
+  &__title {
+    flex: 1;
+  }
+
+  &__price {
+    margin: 0 16px;
+  }
+
+  &__add {
+    background-color: #005dab;
+    color: #fff;
+    padding: 8px 12px;
+
+    &:hover {
+      background-color: #00295b;
+      cursor: pointer;
+    }
+  }
+}
