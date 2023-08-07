@@ -2,7 +2,7 @@ import { useContext } from "react";
 import classes from "./CartItems.module.scss";
 import { CartContext } from "../../../store/cart.state";
 
-const CartItems: React.FC<{}> = (props) => {
+const CartItems: React.FC<{}> = () => {
   const cartContext = useContext(CartContext);
   const cartItems = Object.values(cartContext.cartItems);
 
