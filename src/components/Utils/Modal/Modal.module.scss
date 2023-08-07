@@ -1,0 +1,28 @@
+.modal {
+  &__mask {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+
+  &__content {
+    background-color: #fff;
+    left: 50%;
+    min-width: 400px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    color: #000;
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}

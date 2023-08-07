@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-prettier"],
+  "rules": {
+    "max-nesting-depth": [99],
+    "scss/dollar-variable-pattern": ".",
+    "scss/at-function-pattern": ".",
+    "selector-class-pattern": [
+      "(^[a-z][a-zA-Z0-9]{0,}(-[a-z][a-zA-Z0-9]{0,}){0,}(--[a-z][a-zA-Z0-9]{0,}(-[a-z][a-zA-Z0-9]{0,}){0,}){0,1}(__[a-z][a-zA-Z0-9]{0,}(-[a-z][a-zA-Z0-9]{0,}){0,}(--[a-z][a-zA-Z0-9]{0,}(-[a-z][a-zA-Z0-9]{0,}){0,}){0,1}){0,}$)",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Selector should match the BEM standard as defined in this repo (./docs/CSS-NAMING-CONVENTIONS.md)"
+      }
+    ]
+  }
+}

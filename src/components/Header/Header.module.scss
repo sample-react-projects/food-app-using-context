@@ -1,0 +1,14 @@
+.header {
+  &__container {
+    background-color: #cb202d;
+    color: #f4f4f2;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  &__logo {
+    flex: 1;
+  }
+}
