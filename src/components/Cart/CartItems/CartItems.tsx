@@ -6,7 +6,7 @@ const CartItems: React.FC<{ cartItems: StoreItems }> = (props) => {
 
   const total = cartItems.reduce(
     (acc, val) => acc + val.price * val.quantity,
-    0
+    0,
   );
 
   const getItemsTemplate = () => {
@@ -24,7 +24,7 @@ const CartItems: React.FC<{ cartItems: StoreItems }> = (props) => {
       <div className="cart-total">
         <span className="cart-total__label">Total</span>
         <span className="cart-total__value">{total}</span>
-      </div>
+      </div>,
     );
 
     return items;

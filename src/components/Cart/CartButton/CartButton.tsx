@@ -4,7 +4,7 @@ import Modal from "../../Utils/Modal/Modal";
 import CartItems from "../CartItems/CartItems";
 
 const CartButton: React.FC<{ cartItems: StoreItems; cartCount: number }> = (
-  props
+  props,
 ) => {
   const [modalState, setModalState] = useState(false);
 
