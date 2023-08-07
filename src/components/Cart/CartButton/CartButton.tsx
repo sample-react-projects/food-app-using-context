@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { StoreItems } from "../../../models/item";
+import React, { useContext, useState } from "react";
 import Modal from "../../Utils/Modal/Modal";
 import CartItems from "../CartItems/CartItems";
+import { CartContext } from "../../../store/cart.state";
 
-const CartButton: React.FC<{ cartItems: StoreItems; cartCount: number }> = (
-  props,
-) => {
+const CartButton: React.FC<{}> = (props) => {
   const [modalState, setModalState] = useState(false);
+  const cartContext = useContext(CartContext);
 
   const onOpenHandler = () => {
     setModalState(() => true);
@@ -20,9 +19,9 @@ const CartButton: React.FC<{ cartItems: StoreItems; cartCount: number }> = (
   return (
     <div className="cart" onClick={onOpenHandler}>
       <span>Cart</span>
-      <span>{props.cartCount}</span>
+      <span>{cartContext.cartCount}</span>
       <Modal title="Your cart" modalState={modalState} onClose={onCloseHandler}>
-        <CartItems cartItems={props.cartItems}></CartItems>
+        <CartItems></CartItems>
       </Modal>
     </div>
   );

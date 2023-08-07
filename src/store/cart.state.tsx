@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { StoreItems } from "../models/item";
 import { fetchData } from "../services/fetch.service";
 
-const CartContext = React.createContext<{
+export const CartContext = React.createContext<{
   cartItems: StoreItems;
   cartCount: number;
   items: StoreItems;
