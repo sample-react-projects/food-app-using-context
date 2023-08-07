@@ -1,8 +1,10 @@
-import { StoreItems } from "../../../models/item";
+import { useContext } from "react";
 import classes from "./CartItems.module.scss";
+import { CartContext } from "../../../store/cart.state";
 
-const CartItems: React.FC<{ cartItems: StoreItems }> = (props) => {
-  const cartItems = Object.values(props.cartItems);
+const CartItems: React.FC<{}> = (props) => {
+  const cartContext = useContext(CartContext);
+  const cartItems = Object.values(cartContext.cartItems);
 
   const total = cartItems.reduce(
     (acc, val) => acc + val.price * val.quantity,
