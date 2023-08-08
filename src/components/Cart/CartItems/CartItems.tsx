@@ -23,7 +23,7 @@ const CartItems: React.FC<{}> = () => {
       </div>
     ));
     items.push(
-      <div className="cart-total">
+      <div className="cart-total" key={Math.random()}>
         <span className="cart-total__label">Total</span>
         <span className="cart-total__value">{total}</span>
       </div>,
