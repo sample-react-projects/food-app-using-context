@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StoreItem } from "../../models/item";
 import classes from "./Product.module.scss";
+import { CartContext } from "../../store/cart.state";
 
-const Item: React.FC<{ item: StoreItem; addToCart: (id: string) => void }> = (
-  props,
-) => {
+const Item: React.FC<{ item: StoreItem }> = (props) => {
+  const cartContext = useContext(CartContext);
+
   return (
     <div className={classes.item}>
       <span
@@ -16,7 +17,7 @@ const Item: React.FC<{ item: StoreItem; addToCart: (id: string) => void }> = (
       <button
         className={classes.item__add}
         onClick={() => {
-          props.addToCart(props.item.id);
+          cartContext.addItems(props.item.id);
         }}
       >
         Add

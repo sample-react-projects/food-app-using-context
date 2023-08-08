@@ -1,5 +1,4 @@
 {
-  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-prettier"],
   "rules": {
     "max-nesting-depth": [99],
     "scss/dollar-variable-pattern": ".",
