@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { StoreItems } from "../models/item";
-import { fetchData } from "../services/fetch.service";
-
-export const CartContext = React.createContext<{
-  cartItems: StoreItems;
-  cartCount: number;
-  items: StoreItems;
-  addItems: (id: string) => void;
-}>({ cartItems: {}, cartCount: 0, items: {}, addItems: () => {} });
+import { StoreItems } from "../../models/item";
+import { fetchData } from "../../services/fetch.service";
+import { CartContext } from "./cart.context";
 
 const CartContextProvider: React.FC<{ children: React.ReactNode }> = (
   props,
