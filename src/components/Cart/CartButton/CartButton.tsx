@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Modal from "../../Utils/Modal/Modal";
 import CartItems from "../CartItems/CartItems";
-import { CartContext } from "../../../store/cart.state";
+import { CartContext } from "../../../store/cart/cart.context";
 
 const CartButton: React.FC<{}> = (props) => {
   const [modalState, setModalState] = useState(false);

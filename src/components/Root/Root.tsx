@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Root.module.scss";
 import Header from "../Header/Header";
 import Products from "../Products/Products";
-import CartContextProvider from "../../store/cart.state";
+import CartContextProvider from "../../store/cart/CartContextProider";
 
 const App: React.FC<{}> = () => {
   return (

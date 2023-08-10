@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Product from "../Product/Product";
-import { CartContext } from "../../store/cart.state";
+import { CartContext } from "../../store/cart/cart.context";
 import classes from "./Products.module.scss";
 
 const Products: React.FC<{}> = () => {
