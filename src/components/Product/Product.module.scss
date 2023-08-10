@@ -17,12 +17,6 @@
     width: 100%;
   }
 
-  &__title {
-  }
-
-  &__price {
-  }
-
   &__add {
     background-color: #005dab;
     border: none;
@@ -33,6 +27,12 @@
     &:hover {
       background-color: #00295b;
       cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.4;
+      pointer-events: none;
     }
   }
 }
