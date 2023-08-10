@@ -18,19 +18,14 @@ const CartContextProvider: React.FC<{ children: React.ReactNode }> = (
   }, []);
 
   const addItems = (id: string) => {
-    const cartQuantity = cartItems[id] ? cartItems[id].quantity : 0;
-    const itemQuantity = items![id].quantity;
-
-    if (cartQuantity < itemQuantity) {
-      const newCart = { ...cartItems };
-      if (!cartQuantity) {
-        newCart[id] = { ...items![id], quantity: 0 };
-      }
-      newCart[id].quantity += 1;
-      setCartItems(newCart);
-
-      setCartCount((currentCartCount) => currentCartCount + 1);
+    const newCart = { ...cartItems };
+    if (!newCart[id]) {
+      newCart[id] = { ...items![id], quantity: 0 };
     }
+    newCart[id].quantity += 1;
+    setCartItems(newCart);
+
+    setCartCount((currentCartCount) => currentCartCount + 1);
   };
 
   return (
