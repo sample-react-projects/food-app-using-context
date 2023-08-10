@@ -1,21 +1,32 @@
 .item {
   align-items: center;
+  aspect-ratio: 3/4;
   background-color: #fff;
-  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px 0px #e3e4e5;
+  box-sizing: border-box;
   display: flex;
-  margin: 16px 0;
+  flex-direction: column;
+  gap: 16px;
   padding: 16px;
+  text-align: left;
+  width: 100%;
+
+  &__image {
+    flex: 1;
+    width: 100%;
+  }
 
   &__title {
-    flex: 1;
   }
 
   &__price {
-    margin: 0 16px;
   }
 
   &__add {
     background-color: #005dab;
+    border: none;
+    border-radius: 100px;
     color: #fff;
     padding: 8px 12px;
 
@@ -23,5 +34,17 @@
       background-color: #00295b;
       cursor: pointer;
     }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .item {
+    width: calc((100% - 32px) / 3);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .item {
+    width: calc((100% - 48px) / 4);
   }
 }

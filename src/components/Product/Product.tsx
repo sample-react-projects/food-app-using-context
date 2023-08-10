@@ -7,7 +7,7 @@ const Item: React.FC<{ item: StoreItem }> = (props) => {
   const cartContext = useContext(CartContext);
 
   return (
-    <div className={classes.item}>
+    <li className={classes.item}>
       <span
         className={classes.item__image}
         style={{ backgroundColor: props.item.background }}
@@ -20,9 +20,9 @@ const Item: React.FC<{ item: StoreItem }> = (props) => {
           cartContext.addItems(props.item.id);
         }}
       >
-        Add
+        Add to Cart
       </button>
-    </div>
+    </li>
   );
 };
 

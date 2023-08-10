@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import Product from "../Product/Product";
 import { CartContext } from "../../store/cart.state";
+import classes from "./Products.module.scss";
 
 const Products: React.FC<{}> = () => {
   const cartContext = useContext(CartContext);
   const items = Object.values(cartContext.items);
 
   return (
-    <div className="items">
+    <ul className={classes.items}>
       {items?.map((item) => <Product key={item.id} item={item}></Product>)}
-    </div>
+    </ul>
   );
 };
 
