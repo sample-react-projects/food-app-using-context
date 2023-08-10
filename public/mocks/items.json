@@ -4,34 +4,34 @@
     "title": "Chocolate",
     "price": 40,
     "quantity": 4,
-    "background": "brown"
+    "background": "#858C51"
   },
   "2": {
     "id": "2",
     "title": "Brinjal",
     "price": 20,
     "quantity": 8,
-    "background": "purple"
+    "background": "#FFFFCC"
   },
   "3": {
     "id": "3",
     "title": "Lemon",
     "price": 120,
     "quantity": 2,
-    "background": "yellow"
+    "background": "#FAED7D"
   },
   "4": {
     "id": "4",
     "title": "Spinach",
     "price": 10,
     "quantity": 10,
-    "background": "green"
+    "background": "#DECC61"
   },
   "5": {
     "id": "5",
     "title": "Water",
     "price": 20,
     "quantity": 20,
-    "background": "blue"
+    "background": "#A09C52"
   }
 }
